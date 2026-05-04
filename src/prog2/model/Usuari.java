@@ -1,68 +1,80 @@
 package prog2.model;
 
-public class Usuari implements InUsuari{
+public abstract class Usuari implements InUsuari{
+
+    private String email, nom, adreca;
+    private int numPrestecsNormals, numPrestecsLlargs;
+
+    public Usuari(String email, String nom, String adreca){
+        this.email = email;
+        this.nom = nom;
+        this.adreca = adreca;
+        numPrestecsLlargs = 0;
+        numPrestecsNormals = 0;
+    }
+
+
     @Override
     public void setEmail(String email) {
-        
+        this.email = email;
     }
 
     @Override
     public String getEmail() {
-        return "";
+        return email;
     }
 
     @Override
     public void setNom(String nom) {
-
+        this.nom = nom;
     }
 
     @Override
     public String getNom() {
-        return "";
+        return nom;
     }
 
     @Override
     public void setAdreca(String adreca) {
-
+        this.adreca =adreca;
     }
 
     @Override
     public String getAdreca() {
-        return "";
+        return adreca;
     }
 
     @Override
-    public String tipusUsuari() {
-        return "";
-    }
+    public abstract String tipusUsuari();
 
     @Override
     public void setNumPrestecsNormals(int numPrestecsNormals) {
-
+        this.numPrestecsNormals = numPrestecsNormals;
     }
 
     @Override
     public int getNumPrestecsNormals() {
-        return 0;
+        return numPrestecsNormals;
     }
 
     @Override
     public void setNumPrestecsLlargs(int numPrestecstLlargs) {
-
+        this.numPrestecsLlargs = numPrestecstLlargs;
     }
 
     @Override
     public int getNumPrestecsLlargs() {
-        return 0;
+        return numPrestecsLlargs;
     }
 
     @Override
-    public int getMaxPrestecsNormals() {
-        return 0;
-    }
+    public abstract int getMaxPrestecsNormals() ;
 
     @Override
-    public int getMaxPrestecsLlargs() {
-        return 0;
+    public abstract int getMaxPrestecsLlargs();
+
+    public String toString(){
+        return "Tipus="+tipusUsuari()+", Email="+ email +", Nom="+nom+", Adreca="+adreca+", " +
+                "Num. prestecs normals="+ numPrestecsNormals +", Num. prestecs llargs="+ numPrestecsLlargs;
     }
 }
