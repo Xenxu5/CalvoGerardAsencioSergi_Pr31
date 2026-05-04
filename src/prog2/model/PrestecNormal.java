@@ -13,5 +13,7 @@ public class PrestecNormal extends Prestec{
         return "Normal";
     }
 
-    public long duradaPrestec();
+    public long duradaPrestec(){
+        return 140_000L;
+    }
 }

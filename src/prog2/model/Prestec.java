@@ -13,7 +13,7 @@ public abstract class Prestec implements InPrestec{
         this.exemplar= exemplar;
         this.usuari = usuari;
         this.DataCreacio = DataCreacio;
-        DataLimitRetorn = DataLimitRetorn;
+        DataLimitRetorn = DataCreacio  ;
         retornat = true;
     }
 
@@ -81,9 +81,7 @@ public abstract class Prestec implements InPrestec{
      * Retornar durada prestec. La durada del prestec depen del tipus de prestec
      */
     @Override
-    public long duradaPrestec() {
-        return 0;
-    }
+    public abstract long duradaPrestec();
 
     /**
      * Retornar true si el prestec està endarrerit per a la data actual
