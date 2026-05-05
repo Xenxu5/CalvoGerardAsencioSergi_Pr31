@@ -2,9 +2,15 @@ package prog2.model;
 
 public abstract class Usuari implements InUsuari{
 
+    /**
+     * Atributs privats d'usuari
+     */
     private String email, nom, adreca;
     private int numPrestecsNormals, numPrestecsLlargs;
 
+    /**
+     * Constructor de Usuari
+     */
     public Usuari(String email, String nom, String adreca){
         this.email = email;
         this.nom = nom;
@@ -13,12 +19,13 @@ public abstract class Usuari implements InUsuari{
         numPrestecsNormals = 0;
     }
 
-
+    /**
+     * Setters i getters
+     */
     @Override
     public void setEmail(String email) {
         this.email = email;
     }
-
     @Override
     public String getEmail() {
         return email;
@@ -28,7 +35,6 @@ public abstract class Usuari implements InUsuari{
     public void setNom(String nom) {
         this.nom = nom;
     }
-
     @Override
     public String getNom() {
         return nom;
@@ -38,34 +44,30 @@ public abstract class Usuari implements InUsuari{
     public void setAdreca(String adreca) {
         this.adreca =adreca;
     }
-
     @Override
     public String getAdreca() {
         return adreca;
     }
 
     @Override
-    public abstract String tipusUsuari();
-
-    @Override
     public void setNumPrestecsNormals(int numPrestecsNormals) {
         this.numPrestecsNormals = numPrestecsNormals;
     }
-
     @Override
-    public int getNumPrestecsNormals() {
-        return numPrestecsNormals;
-    }
+    public int getNumPrestecsNormals() {return numPrestecsNormals;}
 
     @Override
     public void setNumPrestecsLlargs(int numPrestecstLlargs) {
         this.numPrestecsLlargs = numPrestecstLlargs;
     }
-
     @Override
-    public int getNumPrestecsLlargs() {
-        return numPrestecsLlargs;
-    }
+    public int getNumPrestecsLlargs() {return numPrestecsLlargs;}
+
+    /**
+     * Metodes abstractes que depenen de les seves clases filles
+     */
+    @Override
+    public abstract String tipusUsuari();
 
     @Override
     public abstract int getMaxPrestecsNormals() ;
@@ -73,6 +75,9 @@ public abstract class Usuari implements InUsuari{
     @Override
     public abstract int getMaxPrestecsLlargs();
 
+    /**
+     * @return un strign amb l'informacio de l'Usuari
+     */
     public String toString(){
         return "Tipus="+tipusUsuari()+", Email="+ email +", Nom="+nom+", Adreca="+adreca+", " +
                 "Num. prestecs normals="+ numPrestecsNormals +", Num. prestecs llargs="+ numPrestecsLlargs;

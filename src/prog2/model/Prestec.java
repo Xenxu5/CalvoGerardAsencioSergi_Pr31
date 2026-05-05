@@ -9,15 +9,15 @@ public abstract class Prestec implements InPrestec{
     private Exemplar exemplar;
     private Usuari usuari;
     private Date DataCreacio, DataLimitRetorn;
-    private Boolean retornat;
+    private Boolean retornat = false;
 
     public Prestec (Exemplar exemplar, Usuari usuari, Date DataCreacio){
         this.exemplar= exemplar;
         this.usuari = usuari;
         this.DataCreacio = DataCreacio;
-        DataLimitRetorn = new Date(DataCreacio.getTime() + duradaPrestec());
+        DataLimitRetorn = new(DataCreacio)
 
-        retornat = true;
+        retornat = false;
     }
 
     @Override
