@@ -5,6 +5,7 @@ import java.util.Date;
 public class PrestecNormal extends Prestec{
 
     public PrestecNormal(Exemplar exemplar, Usuari usuari, Date dataCreacio) {
+
         super(exemplar, usuari, dataCreacio);
     }
 
@@ -14,6 +15,6 @@ public class PrestecNormal extends Prestec{
     }
 
     public long duradaPrestec(){
-        return 140_000L;
+        return 70_000L;
     }
 }

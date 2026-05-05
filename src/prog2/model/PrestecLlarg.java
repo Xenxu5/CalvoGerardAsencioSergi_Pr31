@@ -12,4 +12,10 @@ public class PrestecLlarg extends Prestec{
     public String tipusPrestec() {
         return "Llarg";
     }
+
+    /**
+     * Retornar durada prestec. La durada del prestec depen del tipus de prestec
+     */
+    @Override
+    public long duradaPrestec() {return 140_000L;}
 }
