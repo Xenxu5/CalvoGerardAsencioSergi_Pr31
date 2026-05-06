@@ -25,6 +25,9 @@ public abstract class Prestec implements InPrestec{
         retornat = false;
     }
 
+    /**
+     * Setters i getters
+     */
     @Override
     public void setExemplar(Exemplar exemplar) {
         this.exemplar = exemplar;
