@@ -76,7 +76,7 @@ public abstract class Usuari implements InUsuari{
     public abstract int getMaxPrestecsLlargs();
 
     /**
-     * @return un strign amb l'informacio de l'Usuari
+     * @return un string amb l'informacio de l'Usuari
      */
     public String toString(){
         return "Tipus="+tipusUsuari()+", Email="+ email +", Nom="+nom+", Adreca="+adreca+", " +

@@ -4,6 +4,9 @@ import java.util.Date;
 
 public class PrestecNormal extends Prestec{
 
+    /**
+     * Atribut estatic
+     */
     private static final long Duracio = 70 * 1000L;
 
     /**

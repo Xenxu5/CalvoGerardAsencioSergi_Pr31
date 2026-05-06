@@ -57,7 +57,7 @@ public class Exemplar implements InExemplar{
     }
 
     /**
-     * @return un strign amb l'informacio de l'Exemplar
+     * @return un string amb l'informacio de l'Exemplar
      */
     @Override
     public String toString() {

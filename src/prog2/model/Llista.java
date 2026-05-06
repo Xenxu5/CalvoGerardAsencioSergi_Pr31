@@ -26,7 +26,7 @@ public class Llista<T> implements InLlista,Serializable{
     /**
      * Afegir element a la llista. Afegeix l'element t a la llista
      *
-     * @param o
+     * @param
      */
     @Override
     public void afegir(Object o) throws BiblioException {

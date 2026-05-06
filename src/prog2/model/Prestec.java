@@ -6,17 +6,22 @@ import java.util.Date;
 
 public abstract class Prestec implements InPrestec{
 
+    /**
+     * Atributs privats de Prestec
+     */
     private Exemplar exemplar;
     private Usuari usuari;
     private Date DataCreacio, DataLimitRetorn;
     private Boolean retornat = false;
 
+    /**
+     * Constructor de Usuari
+     */
     public Prestec (Exemplar exemplar, Usuari usuari, Date DataCreacio){
         this.exemplar= exemplar;
         this.usuari = usuari;
         this.DataCreacio = DataCreacio;
-        DataLimitRetorn = new(DataCreacio)
-
+        DataLimitRetorn = new Date(DataCreacio.getTime()+duradaPrestec());
         retornat = false;
     }
 
@@ -87,8 +92,20 @@ public abstract class Prestec implements InPrestec{
     @Override
     public void retorna() throws BiblioException {
 
-    }
+        if (retornat) {
+            throw new BiblioException("El prestec ja ha estat retornat");
+        }else {
+            retornat = true;
+            exemplar.setDisponible(true);
 
+            if (this instanceof PrestecNormal) {
+                usuari.setNumPrestecsNormals(usuari.getNumPrestecsNormals() - 1);
+            } else if (this instanceof PrestecLlarg) {
+                usuari.setNumPrestecsLlargs(usuari.getNumPrestecsLlargs() - 1);
+            }
+        }
+
+    }
 
     /**
      * Retornar true si el prestec està endarrerit per a la data actual
@@ -96,10 +113,13 @@ public abstract class Prestec implements InPrestec{
     @Override
     public boolean prestecEndarrerit() {
         if (retornat) return false;
-        Date ahora = new Date();
-        return ahora.after(DataLimitRetorn);
+        Date dia = new Date();
+        return dia.after(DataLimitRetorn);
     }
 
+    /**
+     * @return un string amb l'informacio de l'Usuari
+     */
     public String toString(){
         return "Tipus="+tipusPrestec()+", Exemplar="+exemplar+", Usuari="+usuari+", Data de creacio="+DataCreacio+", " +
                 "Data límit retorn="+DataLimitRetorn+", Retornat="+retornat;

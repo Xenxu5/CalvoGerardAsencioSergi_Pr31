@@ -5,6 +5,10 @@ import java.util.Date;
 public class PrestecLlarg extends Prestec{
 
     /**
+     * Atribut estatic
+     */
+    private static final long DuracioLlarg = 70 * 1000L;
+    /**
      * Constructor de PrestecLlarg
      */
     public PrestecLlarg(Exemplar exemplar, Usuari usuari, Date dataCreacio) {
@@ -23,5 +27,5 @@ public class PrestecLlarg extends Prestec{
      * @return durada prestec. La durada del prestec depen del tipus de prestec: llarg 14 dies
      */
     @Override
-    public long duradaPrestec() {return 140_000L;}
+    public long duradaPrestec() {return DuracioLlarg;}
 }
