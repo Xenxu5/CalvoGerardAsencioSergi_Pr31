@@ -6,6 +6,17 @@ import java.util.ArrayList;
 
 public class Dades implements InDades{
 
+    private ArrayList<Exemplar> exemplars;
+    private ArrayList<Usuari> usuaris;
+    private ArrayList<Prestec> prestecs;
+
+    public Dades() {
+        exemplars = new ArrayList<>();
+        usuaris = new ArrayList<>();
+        prestecs = new ArrayList<>();
+    }
+
+
     /**
      * Afegeix exemplar. Llança excepció si l'id ja existeix
      *
@@ -17,6 +28,7 @@ public class Dades implements InDades{
     @Override
     public void afegirExemplar(String id, String titol, String autor, boolean admetPrestecLlarg) throws BiblioException {
 
+
     }
 
     /**
@@ -24,7 +36,7 @@ public class Dades implements InDades{
      */
     @Override
     public ArrayList<Exemplar> recuperaExemplars() {
-        return null;
+        return exemplars;
     }
 
     /**
@@ -45,7 +57,7 @@ public class Dades implements InDades{
      */
     @Override
     public ArrayList<Usuari> recuperaUsuaris() {
-        return null;
+        return usuaris;
     }
 
     /**
@@ -78,7 +90,7 @@ public class Dades implements InDades{
      */
     @Override
     public ArrayList<Prestec> recuperaPrestecs() {
-        return null;
+        return prestecs;
     }
 
     /**
