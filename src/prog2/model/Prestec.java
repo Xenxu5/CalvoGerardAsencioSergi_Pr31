@@ -7,7 +7,7 @@ import java.util.Date;
 public abstract class Prestec implements InPrestec{
 
     /**
-     * Atributs privats de Prestec
+     * Atributs privats de Preste
      */
     private Exemplar exemplar;
     private Usuari usuari;
