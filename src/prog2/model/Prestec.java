@@ -115,9 +115,11 @@ public abstract class Prestec implements InPrestec{
      */
     @Override
     public boolean prestecEndarrerit() {
-        if (retornat) return false;
+        if (retornat) {
+            return false;
+        }
         Date dia = new Date();
-        return dia.after(DataLimitRetorn);
+        return dia.after(DataLimitRetorn); // Retorna cert sí el dia actual és posterior al DataLimitRetorn
     }
 
     /**

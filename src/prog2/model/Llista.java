@@ -28,34 +28,35 @@ public class Llista<T> implements InLlista<T>,Serializable{
     }
 
     /**
-     * Afegir element a la llista. Afegeix l'element t a la llista
+     * Afegir element a la llista. Afegeix l'element 'e' a la llista
      *
-     * @param
+     * @param e
      */
     @Override
-    public void afegir(T o) throws BiblioException{
-        llista.add(o);
+    public void afegir(T e) throws BiblioException{
+        llista.add(e);
     }
 
     /**
-     * Esborrar element de la llista. Esborra l'element t a la llista
+     * Esborrar element de la llista. Esborra l'element 'e' de la llista
      *
-     * @param o
+     * @param e
      */
     @Override
-    public void esborrar(T o){
+    public void esborrar(T e){
+
         Iterator<T> it = llista.iterator();
 
         while (it.hasNext()) {
-            if (it.next().equals(o)) {
+            if (it.next().equals(e)) {
                 it.remove();
                 return;
             }
-        }
+        } // Si e no està a la llista, llavors no fa res
     }
 
     /**
-     * Retornar element de la llista a la posició position
+     * Retornar element de la llista de la posició position
      *
      * @param position
      */

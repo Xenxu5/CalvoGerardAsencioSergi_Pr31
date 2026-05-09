@@ -7,30 +7,27 @@ import java.util.Iterator;
 
 public class LlistaUsuaris extends Llista<Usuari> implements Serializable {
     /**
-     * Afegir element a la llista. Afegeix l'element t a la llista
+     * Afegir element a la llista. Afegeix un usuari a la llista
+     * Si aquest ja es troba en ella, es llença excepció
      *
-     * @param o
+     * @param usuari
      */
     @Override
-    public void afegir(Usuari o) throws BiblioException {
+    public void afegir(Usuari usuari) throws BiblioException {
+        // Si ja està, llencem excepció
+        if (contains(usuari.getEmail())) {
+            throw new BiblioException("Aquest usuari ja es troba a la llista");
+        }
+        // Si no està, l'afegim
+        super.afegir(usuari);
+    }
+
+    public boolean contains(String email) {
         Iterator<Usuari> it = llista.iterator();
 
         while (it.hasNext()) {
             Usuari usuari = it.next();
-
-            if (usuari.getEmail().equals(o.getEmail())) {
-                throw new BiblioException("Email duplicat");
-            }
-        }
-        llista.add(o);
-    }
-
-    public boolean contains(String o) {
-        Iterator<Usuari> it = llista.iterator();
-
-        while (it.hasNext()) {
-            Usuari e = it.next();
-            if (e.getEmail().equals(o)) {
+            if (usuari.getEmail().equals(email)) {
                 return true;
             }
         }

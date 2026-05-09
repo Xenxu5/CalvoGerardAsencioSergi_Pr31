@@ -8,23 +8,25 @@ import java.util.Iterator;
 public class LlistaExemplars extends Llista<Exemplar> implements Serializable {
 
     /**
-     * Afegir element a la llista. Afegeix l'element t a la llista
-     *
-     * @param o
+     * Afegir element a la llista. Afegeix l'element 'e' a la llista. En aquest cas, un exemplar
+     *Llencem excepció si l'exemplar ja existeix en aquesta llista
+     * @param e
      */
     @Override
-    public void afegir(Exemplar o) throws BiblioException {
-        Iterator<Exemplar> it = llista.iterator();
-        while (it.hasNext()) {
-            Exemplar ex = it.next();
-
-            if (ex.getId().equals(o.getId())) {
-                throw new BiblioException("Id duplicat");
-            }
+    public void afegir(Exemplar e) throws BiblioException {
+        // Utilitzem el mètode contains per simplificar
+        if (contains(e.getId())) { // Si ja hi és, llencem excepció
+            throw new BiblioException("Aquest exemplar ja es troba a la llista");
         }
-        llista.add(o);
+        // Si no està, l'afegim
+        super.afegir(e);
     }
 
+    /**
+     * Mètode que comprova si l'element és a la llista o no
+     * @param id
+     * @return
+     */
     public boolean contains(String id) {
 
         Iterator<Exemplar> it = llista.iterator();
