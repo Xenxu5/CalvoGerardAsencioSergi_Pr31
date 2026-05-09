@@ -4,13 +4,17 @@ import prog2.vista.BiblioException;
 
 import java.util.ArrayList;
 import java.io.Serializable;
-import prog2.vista.BiblioException;
+import java.util.Iterator;
 
-
-
-public class Llista<T> implements InLlista,Serializable{
+public class Llista<T> implements InLlista<T>,Serializable{
+    /**
+     * Atribut protected de Llista
+     */
     protected ArrayList<T> llista;
 
+    /**
+     * Constructor de Llista
+     */
     public Llista() {
         llista = new ArrayList<>();
     }
@@ -20,7 +24,7 @@ public class Llista<T> implements InLlista,Serializable{
      */
     @Override
     public int getSize() {
-        return 0;
+        return llista.size();
     }
 
     /**
@@ -29,8 +33,8 @@ public class Llista<T> implements InLlista,Serializable{
      * @param
      */
     @Override
-    public void afegir(Object o) throws BiblioException {
-
+    public void afegir(T o) throws BiblioException{
+        llista.add(o);
     }
 
     /**
@@ -39,8 +43,15 @@ public class Llista<T> implements InLlista,Serializable{
      * @param o
      */
     @Override
-    public void esborrar(Object o) {
+    public void esborrar(T o){
+        Iterator<T> it = llista.iterator();
 
+        while (it.hasNext()) {
+            if (it.next().equals(o)) {
+                it.remove();
+                return;
+            }
+        }
     }
 
     /**
@@ -49,31 +60,27 @@ public class Llista<T> implements InLlista,Serializable{
      * @param position
      */
     @Override
-    public Object getAt(int position) {
-        return null;
+    public T getAt(int position) {
+        return llista.get(position);
     }
 
     /**
-     * Buidar tots el elements de la llista
+     * Buidar tots els elements de la llista
      */
     @Override
-    public void clear() {
-
-    }
+    public void clear() {llista.clear();}
 
     /**
      * Retornar true si la llista és buida
      */
     @Override
     public boolean isEmpty() {
-        return false;
+        return llista.isEmpty();
     }
 
     /**
      * Retornar l'ArrayList que es fa servir dins de la classe
      */
     @Override
-    public ArrayList getArrayList() {
-        return null;
-    }
+    public ArrayList<T> getArrayList() {return new ArrayList<>(llista);}
 }
