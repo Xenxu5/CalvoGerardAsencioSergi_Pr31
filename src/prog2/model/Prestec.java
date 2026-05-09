@@ -123,6 +123,7 @@ public abstract class Prestec implements InPrestec{
     /**
      * @return un string amb l'informacio de l'Usuari
      */
+    @Override
     public String toString(){
         return "Tipus="+tipusPrestec()+", Exemplar="+exemplar+", Usuari="+usuari+", Data de creacio="+DataCreacio+", " +
                 "Data límit retorn="+DataLimitRetorn+", Retornat="+retornat;

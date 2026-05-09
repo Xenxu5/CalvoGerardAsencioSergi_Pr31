@@ -7,7 +7,7 @@ public class PrestecNormal extends Prestec{
     /**
      * Atribut estatic
      */
-    private static final long Duracio = 70 * 1000L;
+    private static final long Duracio = 70 * 1000L; // Duració d'un prestem normal en aquesta pràctica (70 segons)
 
     /**
      * Constructor de PrestecNormal

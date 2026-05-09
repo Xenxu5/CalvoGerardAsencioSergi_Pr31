@@ -6,54 +6,54 @@ public class Exemplar implements InExemplar{
      * Atributs privats d'Exemplar
      */
 
-    private String Id, Titol, Autor;
-    private boolean AdmetPrestecLlarg, Disponible;
+    private String id, titol, autor;
+    private boolean admetPrestecLlarg, disponible;
 
     /**
      * Constructor d'Exemplar
      */
-    public Exemplar(String Id,String Titol, String Autor, boolean AdmetPrestecLlarg){
-        this.Id = Id;
-        this.Titol = Titol;
-        this.Autor = Autor;
-        this.AdmetPrestecLlarg = AdmetPrestecLlarg;
-        this.Disponible = true;
+    public Exemplar(String id,String titol, String autor, boolean admetPrestecLlarg){
+        this.id = id;
+        this.titol = titol;
+        this.autor = autor;
+        this.admetPrestecLlarg = admetPrestecLlarg;
+        this.disponible = true;
     }
 
     /**
      * Setters i getters
      */
     @Override
-    public void setId(String id) {this.Id = id;}
+    public void setId(String id) {this.id = id;}
     @Override
     public String getId() {
-        return Id;
+        return id;
     }
 
     @Override
-    public void setTitol(String titol) {this.Titol = titol;}
+    public void setTitol(String titol) {this.titol = titol;}
     @Override
     public String getTitol() {
-        return Titol;
+        return titol;
     }
 
     @Override
-    public void setAutor(String autor) {this.Autor = autor;}
+    public void setAutor(String autor) {this.autor = autor;}
     @Override
     public String getAutor() {
-        return Autor;
+        return autor;
     }
 
     @Override
-    public void setAdmetPrestecLlarg(boolean admetPrestecLlarg) {this.AdmetPrestecLlarg = admetPrestecLlarg;}
+    public void setAdmetPrestecLlarg(boolean admetPrestecLlarg) {this.admetPrestecLlarg = admetPrestecLlarg;}
     @Override
     public boolean getAdmetPrestecLlarg() {
-        return AdmetPrestecLlarg;
+        return admetPrestecLlarg;
     }
 
-    public void setDisponible(boolean disponible) {this.Disponible = disponible;}
+    public void setDisponible(boolean disponible) {this.disponible = disponible;}
     public boolean isDisponible() {
-        return Disponible;
+        return disponible;
     }
 
     /**
@@ -61,7 +61,7 @@ public class Exemplar implements InExemplar{
      */
     @Override
     public String toString() {
-        return "Id=" + Id +", Titol=" + Titol+", Autor=" + Autor +", Admet Prestec Llarg=" + AdmetPrestecLlarg +", Disponible=" + Disponible;
+        return "Id=" + id +", Titol=" + titol +", Autor=" + autor +", Admet Prestec Llarg=" + admetPrestecLlarg +", Disponible=" + disponible;
     }
 
 

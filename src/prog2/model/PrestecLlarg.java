@@ -7,7 +7,7 @@ public class PrestecLlarg extends Prestec{
     /**
      * Atribut estatic
      */
-    private static final long DuracioLlarg = 70 * 1000L;
+    private static final long DuracioLlarg = 140 * 1000L;
     /**
      * Constructor de PrestecLlarg
      */

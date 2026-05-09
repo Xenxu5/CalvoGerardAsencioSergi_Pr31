@@ -78,6 +78,7 @@ public abstract class Usuari implements InUsuari{
     /**
      * @return un string amb l'informacio de l'Usuari
      */
+    @Override
     public String toString(){
         return "Tipus="+tipusUsuari()+", Email="+ email +", Nom="+nom+", Adreca="+adreca+", " +
                 "Num. prestecs normals="+ numPrestecsNormals +", Num. prestecs llargs="+ numPrestecsLlargs;
