@@ -4,13 +4,7 @@ import java.io.Serializable;
 
 public class LlistaPrestecs extends Llista<Prestec> implements Serializable {
 
-    /**
-     * Afegir element a la llista. Afegeix l'element t a la llista
-     *
-     * @param o
-     */
-    @Override
-    public void afegir(Prestec o) {
-        llista.add(o);
-    }
+    // En aquesta llista no fa falta afegir res.
+    // Tots els mètodes que hereta de la seva classe pare Llista són els ùnics necessaris.
+    // Serà la classe dades l'encarregada de gestionar totes les condicions que els préstecs demanen.
 }
