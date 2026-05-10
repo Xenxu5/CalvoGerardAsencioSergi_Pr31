@@ -139,7 +139,7 @@ public class BiblioUB {
                     break;
                 case MENU_PRINCIPAL_EXIT:
                     // Sortir      1
-                    System.err.println("Sortint de l'aplicació...");
+                    System.out.println("Sortint de l'aplicació...");
                     break;
             }
         } while(opcio != OpcionsMenuPrincipal.MENU_PRINCIPAL_EXIT);
@@ -185,12 +185,12 @@ public class BiblioUB {
 
             // Passem les dades al pont
             adaptador.afegirExemplar(id, titol, autor, admetLlarg);
-            System.out.println("-> Exemplar afegit correctament.");
+            System.out.println("Exemplar afegit correctament.");
 
         } catch (BiblioException e) {
-            System.out.println("-> ERROR: " + e.getMessage());
+            System.out.println("ERROR: " + e.getMessage());
         } catch (Exception e) {
-            System.out.println("-> ERROR en les dades introduïdes.");
+            System.out.println("ERROR en les dades introduïdes.");
             sc.nextLine(); // Netejar buffer per si ha posat lletres en lloc de true/false
         }
     }
@@ -228,17 +228,17 @@ public class BiblioUB {
             String nom = sc.nextLine();
             System.out.print("Introdueix l'adreça: ");
             String adreca = sc.nextLine();
-            System.out.print("És estudiant? (true = Estudiant, false = Professor): ");
+            System.out.print("És estudiant? (true/false): ");
             boolean esEstudiant = sc.nextBoolean();
             sc.nextLine(); // Netejar el buffer del teclat
 
             adaptador.afegirUsuari(email, nom, adreca, esEstudiant);
-            System.out.println("-> Usuari afegit correctament.");
+            System.out.println("Usuari afegit correctament.");
 
         } catch (BiblioException e) {
-            System.out.println("-> ERROR: " + e.getMessage());
+            System.out.println("ERROR: " + e.getMessage());
         } catch (Exception e) {
-            System.out.println("-> ERROR en les dades introduïdes.");
+            System.out.println("ERROR en les dades introduïdes.");
             sc.nextLine();
         }
     }
@@ -290,30 +290,31 @@ public class BiblioUB {
             sc.nextLine(); // Netejar buffer
 
             adaptador.afegirPrestec(posExemplar, posUsuari, esLlarg);
-            System.out.println("-> Préstec realitzat correctament.");
+            System.out.println("Préstec realitzat correctament.");
 
         } catch (BiblioException e) {
-            System.out.println("-> ERROR: " + e.getMessage());
+            System.out.println("ERROR: " + e.getMessage());
         } catch (Exception e) {
-            System.out.println("-> ERROR: Dades introduïdes incorrectes.");
+            System.out.println("ERROR: Dades introduïdes incorrectes.");
             sc.nextLine();
         }
     }
 
     private void cancelarPrestec(Scanner sc){
         try {
+            // Mostrem els actuals
             showList("Préstecs Actuals", adaptador.recuperaPrestecs());
             System.out.print("Introdueix la posició del préstec que vols retornar: ");
             int posPrestec = sc.nextInt();
             sc.nextLine(); // Netejar buffer
 
             adaptador.retornarPrestec(posPrestec);
-            System.out.println("-> Préstec retornat correctament.");
+            System.out.println("Préstec retornat correctament.");
 
         } catch (BiblioException e) {
-            System.out.println("-> ERROR: " + e.getMessage());
+            System.out.println("ERROR: " + e.getMessage());
         } catch (Exception e) {
-            System.out.println("-> ERROR: Posició no vàlida.");
+            System.out.println("ERROR: Posició no vàlida.");
             sc.nextLine();
         }
     }
