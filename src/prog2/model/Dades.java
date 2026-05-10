@@ -105,10 +105,11 @@ public class Dades implements InDades{
         }
 
         // Condició 2: Usuari amb préstecs endarrerits
-        for (int i = 0; i < prestecs.getSize(); i++) {
-            Prestec p = prestecs.getAt(i);
-            // Si no està retornat, és d'aquest usuari, i està endarrerit -> llencem excepció
-            if (!p.getRetornat() && p.getUsuari().getEmail().equals(u.getEmail()) && p.prestecEndarrerit()) {
+
+        Iterator<Prestec> it = prestecs.getArrayList().iterator();
+        while (it.hasNext()) {
+            Prestec p = it.next();
+            if (!p.getRetornat() && p.getUsuari().equals(u) && p.prestecEndarrerit()) {
                 throw new BiblioException("L'usuari té préstecs endarrerits actius i no pot demanar-ne de nous.");
             }
         }
@@ -174,18 +175,16 @@ public class Dades implements InDades{
      */
     @Override
     public ArrayList<Prestec> recuperaPrestecsNoRetornats() {
-       // Fem un ArrayList on guardarem els préstecs no retornats
+        // Fem un ArrayList on guardarem els préstecs no retornats
         ArrayList<Prestec> resultat = new ArrayList<>();
-
-        for (int i = 0; i < prestecs.getSize(); i++) {
-            Prestec p = prestecs.getAt(i);
-
+        Iterator<Prestec> it = prestecs.getArrayList().iterator();
+        while (it.hasNext()) {
+            Prestec p = it.next();
             // Si el préstec no està retornat, l'afegim a la llista de resultats
             if (!p.getRetornat()) {
                 resultat.add(p);
             }
         }
-
         return resultat;
     }
 }
