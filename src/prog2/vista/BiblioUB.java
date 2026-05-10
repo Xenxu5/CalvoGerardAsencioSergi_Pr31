@@ -77,7 +77,10 @@ public class BiblioUB {
     public BiblioUB() {
         adaptador = new Adaptador();
     }
-     
+
+    /**
+     * Mètode pùblic que gestiona el menu principal
+     */
     public void gestioBiblioUB() {
         // Creem un objecte per llegir des del teclat
         Scanner sc = new Scanner(System.in);
@@ -145,6 +148,10 @@ public class BiblioUB {
         } while(opcio != OpcionsMenuPrincipal.MENU_PRINCIPAL_EXIT);
     }
 
+    /**
+     * Mètode que gestiona el submenu de la primera opció
+     * @param sc
+     */
     private void menuGestioExemplars(Scanner sc) {
         Menu<OpcionsMenuGestioExemplars> menu = new Menu<>("Gestió d'Exemplars", OpcionsMenuGestioExemplars.values());
         menu.setDescripcions(descMenuGestioExemplars);
@@ -195,6 +202,10 @@ public class BiblioUB {
         }
     }
 
+    /**
+     * Mètode que gestiona el submenu de la segona opció
+     * @param sc
+     */
     private void menuGestioUsuaris(Scanner sc) {
         Menu<OpcionsMenuGestioClients> menu = new Menu<>("Gestió d'Usuaris", OpcionsMenuGestioClients.values());
         menu.setDescripcions(descMenuGestioUsuaris);
@@ -243,6 +254,10 @@ public class BiblioUB {
         }
     }
 
+    /**
+     * Mètode que gestiona el submenu de la tercera opció
+     * @param sc
+     */
     private void menuGestioPrestecs(Scanner sc) {
         Menu<OpcionsMenuGestioPrestecs> menu = new Menu<>("Gestió de Préstecs", OpcionsMenuGestioPrestecs.values());
         menu.setDescripcions(descMenuGestioPrestecs);
@@ -300,6 +315,10 @@ public class BiblioUB {
         }
     }
 
+    /**
+     * Mètode que anul·la un préstec
+     * @param sc
+     */
     private void cancelarPrestec(Scanner sc){
         try {
             // Mostrem els actuals
