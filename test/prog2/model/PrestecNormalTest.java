@@ -2,6 +2,8 @@ package prog2.model;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import prog2.vista.BiblioException;
+
 import java.util.Date;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -69,7 +71,7 @@ public class PrestecNormalTest {
     }
 
     @Test
-    public void testRetornaMarcaRetornat() {
+    public void testRetornaMarcaRetornat() throws BiblioException {
         exemplar.setDisponible(false);
         estudiant.setNumPrestecsNormals(1);
         PrestecNormal p = new PrestecNormal(exemplar, estudiant, new Date());
@@ -78,7 +80,7 @@ public class PrestecNormalTest {
     }
 
     @Test
-    public void testRetornaAlliberaExemplar() {
+    public void testRetornaAlliberaExemplar() throws BiblioException {
         exemplar.setDisponible(false);
         estudiant.setNumPrestecsNormals(1);
         PrestecNormal p = new PrestecNormal(exemplar, estudiant, new Date());
@@ -87,7 +89,7 @@ public class PrestecNormalTest {
     }
 
     @Test
-    public void testRetornaDecrementaComptadorUsuari() {
+    public void testRetornaDecrementaComptadorUsuari() throws BiblioException {
         exemplar.setDisponible(false);
         estudiant.setNumPrestecsNormals(1);
         PrestecNormal p = new PrestecNormal(exemplar, estudiant, new Date());
