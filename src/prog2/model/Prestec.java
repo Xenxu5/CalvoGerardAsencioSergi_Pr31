@@ -2,9 +2,10 @@ package prog2.model;
 
 import prog2.vista.BiblioException;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public abstract class Prestec implements InPrestec{
+public abstract class Prestec implements InPrestec, Serializable {
 
     /**
      * Atributs privats de Prestec
