@@ -1,11 +1,26 @@
 package prog2.vista;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class sa {
-    private JButton button1;
+public class sa extends JFrame{
+    private JButton DADESButton;
     private JPanel panel1;
-    private JButton button2;
-    private JButton button3;
+    private JButton GESTIONSButton;
+    private JButton PRESTECSButton;
     private JLabel Texto;
+
+    public sa() {
+        GESTIONSButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+    }
+
+    private void createUIComponents() {
+
+    }
 }
