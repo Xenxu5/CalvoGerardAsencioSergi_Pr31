@@ -13,7 +13,7 @@ public class AppBiblioUB extends JFrame{
     private JButton btnDades;
     private JButton btnSortir;
     private JButton btnGestions;
-    // Atribut per conectar la part de l'app amb el adaptador del programa principal
+    // Atribut per conectar la part de l'app amb el adaptador del programa principal.
     private final Adaptador adaptador;
     /**
      * Constructor de AppBiblioUB
