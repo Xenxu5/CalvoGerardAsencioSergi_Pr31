@@ -26,7 +26,7 @@ public class FrmVisualitzarExemplars extends JDialog {
 
         btnSortir.addActionListener(new ActionListener() {
             /**
-             * Invoked when an action occurs.
+             * El btnSortir tanca la finestra actual i torna a la finestra de gestions d'exemplars
              *
              * @param e the event to be processed
              */

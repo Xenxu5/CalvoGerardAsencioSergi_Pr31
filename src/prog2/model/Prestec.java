@@ -128,7 +128,11 @@ public abstract class Prestec implements InPrestec, Serializable {
      */
     @Override
     public String toString(){
-        return "Tipus="+tipusPrestec()+", Exemplar="+exemplar+", Usuari="+usuari+", Data de creacio="+DataCreacio+", " +
-                "Data límit retorn="+DataLimitRetorn+", Retornat="+retornat;
+        return "Tipus: " + tipusPrestec() + "\n" +
+                "Exemplar: " + exemplar + "\n" +
+                "Usuari: " + usuari + "\n" +
+                "Data de creació: " + DataCreacio + "\n" +
+                "Data límit retorn: " + DataLimitRetorn + "\n" +
+                "Retornat: " + retornat;
     }
 }

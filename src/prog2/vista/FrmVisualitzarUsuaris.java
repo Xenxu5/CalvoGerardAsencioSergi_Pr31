@@ -33,7 +33,7 @@ public class FrmVisualitzarUsuaris extends JDialog {
         visualitzarUsuaris();
 
         /**
-         * El btnSortir tanca la finestra de dades i torna a la finestra de gestions d'usuari
+         * El btnSortir tanca la finestra actual i torna a la finestra de gestions d'usuari
          */
         btnSortir.addActionListener(new ActionListener() {
             @Override

@@ -42,5 +42,29 @@ public class FrmGestioPrestecs extends JDialog {
                 formulari.setVisible(true);
             }
         });
+        btnVisualitzarPrestecs.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FrmVisualitzarPrestecs formulari = new FrmVisualitzarPrestecs(FrmGestioPrestecs.this, adaptador);
+                formulari.setVisible(true);
+            }
+        });
+        btnRetornarPrestecs.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FrmRetornarPrestecs formulari = new FrmRetornarPrestecs(FrmGestioPrestecs.this, adaptador);
+                formulari.setVisible(true);
+            }
+        });
     }
 }
