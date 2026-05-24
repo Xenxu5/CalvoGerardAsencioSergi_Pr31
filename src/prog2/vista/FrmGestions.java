@@ -36,6 +36,18 @@ public class FrmGestions extends JDialog {
                 ventana.setVisible(true);
             }
         });
+        btnExemplars.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FrmGestioExemplars ventana = new FrmGestioExemplars(FrmGestions.this, adaptador);
+                ventana.setVisible(true);
+            }
+        });
     }
 
 }

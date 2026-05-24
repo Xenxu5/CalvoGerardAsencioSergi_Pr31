@@ -58,7 +58,7 @@
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <text value="GESTIONS USUARIS"/>
+          <text value="GESTIÓ USUARIS"/>
         </properties>
       </component>
     </children>

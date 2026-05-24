@@ -23,7 +23,7 @@ public class FrmVisualitzarUsuaris extends JDialog {
         setSize(400,700);
         setLocationRelativeTo(parent);
         setModal(true);
-
+        // Cridem al mètode per mostrar els usuaris
         visualitzarUsuaris();
 
         btnSortir.addActionListener(new ActionListener() {
@@ -34,6 +34,9 @@ public class FrmVisualitzarUsuaris extends JDialog {
         });
     }
 
+    /**
+     * Mètode que permet mostrar els usuaris en un format adequat.
+     */
     private void visualitzarUsuaris() {
 
         DefaultListModel<String> model = new DefaultListModel<>();
@@ -82,7 +85,7 @@ public class FrmVisualitzarUsuaris extends JDialog {
                 model.addElement("");
             }
         }
-
+        // Ho apliquem a la llista
         lstUsuaris.setModel(model);
     }
 
