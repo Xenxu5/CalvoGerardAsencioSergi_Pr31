@@ -32,8 +32,8 @@ public class FrmGestions extends JDialog {
         btnUsuaris.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FrmGestioUsuaris ventana = new FrmGestioUsuaris(FrmGestions.this, adaptador);
-                ventana.setVisible(true);
+                FrmGestioUsuaris formulari = new FrmGestioUsuaris(FrmGestions.this, adaptador);
+                formulari.setVisible(true);
             }
         });
         btnExemplars.addActionListener(new ActionListener() {
@@ -44,8 +44,20 @@ public class FrmGestions extends JDialog {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-                FrmGestioExemplars ventana = new FrmGestioExemplars(FrmGestions.this, adaptador);
-                ventana.setVisible(true);
+                FrmGestioExemplars formulari = new FrmGestioExemplars(FrmGestions.this, adaptador);
+                formulari.setVisible(true);
+            }
+        });
+        btnPrestecs.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FrmGestioPrestecs formulari = new FrmGestioPrestecs(FrmGestions.this, adaptador);
+                formulari.setVisible(true);
             }
         });
     }
