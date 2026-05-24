@@ -7,12 +7,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class FrmRetornarPrestecs extends JDialog {
+    /**
+     * Atributs de la finestra que retorna els préstecs
+     */
     private JPanel pnlRetornarPrestecs;
     private JComboBox cmbPrestecs;
     private JButton btnAcceptar;
     private JButton btnCancelar;
     private final Adaptador adaptador;
 
+    /**
+     * Constructor de la finestra de retorn dels préstecs
+     */
     public FrmRetornarPrestecs(JDialog parent, Adaptador adaptador) {
         this.adaptador = adaptador;
         setTitle("Retornar Préstec");
@@ -50,7 +56,7 @@ public class FrmRetornarPrestecs extends JDialog {
         });
         btnAcceptar.addActionListener(new ActionListener() {
             /**
-             * Invoked when an action occurs.
+             * Guarda i retorna el préstec que s'ha seleccionat
              *
              * @param e the event to be processed
              */

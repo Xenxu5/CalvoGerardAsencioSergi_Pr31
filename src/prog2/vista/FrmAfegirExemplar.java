@@ -7,6 +7,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class FrmAfegirExemplar extends JDialog {
+    /**
+     * Atributs privats de la finestra d'afegir exemplars
+     */
     private JPanel pnlAfegirExemplar;
     private JCheckBox chkPrestecLlarg;
     private JTextField txtTitol;
@@ -16,6 +19,9 @@ public class FrmAfegirExemplar extends JDialog {
     private JButton btnCancelar;
     private final Adaptador adaptador;
 
+    /**
+     * Constructor de la finestra d'afegir exemplars
+     */
     public FrmAfegirExemplar (JDialog parent, Adaptador adaptador) {
         this.adaptador = adaptador;
         setTitle("Afegir exemplar");
@@ -25,7 +31,7 @@ public class FrmAfegirExemplar extends JDialog {
         setModal(true);
         btnCancelar.addActionListener(new ActionListener() {
             /**
-             * Invoked when an action occurs.
+             * Surt de la finestra actual i torna a la gestió d'exemplars
              *
              * @param e the event to be processed
              */
@@ -34,8 +40,8 @@ public class FrmAfegirExemplar extends JDialog {
         });
         btnAcceptar.addActionListener(new ActionListener() {
             /**
-             * Invoked when an action occurs.
-             *
+             * Guarda i afegeix la informació dels exemplars.
+             * Llença error si no s'omplen tots els camps.
              * @param e the event to be processed
              */
             @Override

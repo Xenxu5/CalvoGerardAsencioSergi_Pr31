@@ -7,6 +7,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class FrmAfegirPrestec extends JDialog {
+    /**
+     * Atributs de la finestra d'afegir préstecs
+     */
     private JPanel pnlAfegirPrestec;
     private JCheckBox chkPrestecLlarg;
     private JComboBox cmbUsuari;
@@ -15,6 +18,9 @@ public class FrmAfegirPrestec extends JDialog {
     private JButton btnCancelar;
     private final Adaptador adaptador;
 
+    /**
+     * Constructor de la finestra afegir préstecs
+     */
     public FrmAfegirPrestec(JDialog parent, Adaptador adaptador) {
         this.adaptador = adaptador;
         setTitle("Afegir Préstec");
@@ -66,7 +72,7 @@ public class FrmAfegirPrestec extends JDialog {
 
         btnCancelar.addActionListener(new ActionListener() {
             /**
-             * Invoked when an action occurs.
+             * Tanca la finestra actual i torna a la gestió de préstecs
              *
              * @param e the event to be processed
              */
@@ -75,7 +81,7 @@ public class FrmAfegirPrestec extends JDialog {
         });
         btnAcceptar.addActionListener(new ActionListener() {
             /**
-             * Invoked when an action occurs.
+             * Guarda i afegeix un préstec
              *
              * @param e the event to be processed
              */

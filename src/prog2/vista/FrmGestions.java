@@ -29,7 +29,7 @@ public class FrmGestions extends JDialog {
         setLocationRelativeTo(parent);
         setModal(true);
         /**
-         * El btnSortir tanca la finestra de dades i torna a la principal
+         * El btnSortir tanca la finestra actual i torna a la principal
          */
         btnSortir.addActionListener(new ActionListener() {
             @Override
@@ -59,9 +59,7 @@ public class FrmGestions extends JDialog {
         });
         btnPrestecs.addActionListener(new ActionListener() {
             /**
-             * Invoked when an action occurs.
-             *
-             * @param e the event to be processed
+             * El btnPrestecs obra la finestra per a les gestions de préstecs
              */
             @Override
             public void actionPerformed(ActionEvent e) {

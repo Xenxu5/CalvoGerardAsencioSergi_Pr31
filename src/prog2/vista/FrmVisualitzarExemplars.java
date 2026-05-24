@@ -7,12 +7,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class FrmVisualitzarExemplars extends JDialog {
+    /**
+     * Atributs privats de la finestra de visualitzar els exemplars
+     */
     private JPanel pnlVisualitzarExemplars;
     private JList lstExemplars;
     private JButton btnSortir;
     private JScrollPane scroll;
     private final Adaptador adaptador;
 
+    /**
+     * Constructor de la finestra de visualització d'exemplars
+     */
     public FrmVisualitzarExemplars(JDialog parent, Adaptador adaptador) {
 
         this.adaptador = adaptador;

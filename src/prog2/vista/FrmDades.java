@@ -21,8 +21,8 @@ public class FrmDades extends JDialog {
         setTitle("Dades");
         setContentPane(pnlDades);
         setSize(400, 300);
-        setLocationRelativeTo(parent);
-        setModal(true);
+        setLocationRelativeTo(parent); // Centrar la finestra respecte al seu pare
+        setModal(true); // Fa que no es pugui modificar la seva finestra pare
         /**
          * El btnSortir tanca la finestra de dades i torna a la principal
          */

@@ -46,7 +46,7 @@ public class FrmGestioUsuaris extends JDialog {
             }
         });
         /**
-         * El btnAfegirUsuari obra la finestra per visualitzar els usuaris registrats
+         * El btnVisualitzarUsuaris obra la finestra per visualitzar els usuaris registrats
          */
         btnVisualitzarUsuaris.addActionListener(new ActionListener() {
 

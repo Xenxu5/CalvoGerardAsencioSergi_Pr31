@@ -7,12 +7,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class FrmVisualitzarPrestecs extends JDialog{
+    /**
+     * Atributs de la finestra de visualització dels préstecs
+     */
     private JPanel pnlVisualitzarPrestecs;
     private JCheckBox chkNoRetornats;
     private JList lstPrestecs;
     private JButton btnSortir;
     private final Adaptador adaptador;
 
+    /**
+     * Constructor de la finestra per visualitzar els préstecs
+     */
     public FrmVisualitzarPrestecs(JDialog parent, Adaptador adaptador) {
         this.adaptador = adaptador;
         setTitle("Visualitzar Préstecs");

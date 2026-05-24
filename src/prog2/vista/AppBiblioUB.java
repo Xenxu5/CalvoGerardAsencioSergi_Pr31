@@ -13,7 +13,7 @@ public class AppBiblioUB extends JFrame{
     private JButton btnDades;
     private JButton btnSortir;
     private JButton btnGestions;
-    // Atribut per conectar la part de l'app amb el adaptador del programa principal.
+    // Atribut per conectar la part de l'app amb l'adaptador del programa principal.
     private final Adaptador adaptador;
     /**
      * Constructor de AppBiblioUB
@@ -21,11 +21,11 @@ public class AppBiblioUB extends JFrame{
     public AppBiblioUB() {
 
         adaptador = new Adaptador();
-        setTitle("Biblioteca UB");
-        setContentPane(pnlPrincipal);
-        setSize(400, 300);
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation (EXIT_ON_CLOSE);
+        setTitle("Biblioteca UB");  // Títol que apareix amunt de la finestra
+        setContentPane(pnlPrincipal); //Assigna el JPanel (creat al dissenyador visual) com a contingut central de la finestra
+        setSize(400, 300); // Estableix la mida de la finestra
+        setLocationRelativeTo(null); // Centra la finestra al mig de la pantalla en obrir-se
+        setDefaultCloseOperation (EXIT_ON_CLOSE); // S'encarrega d'aturar l'execució si es tanca la finestra per la creu
         /**
          * El btnSortir tanca directament l'aplicació
          */

@@ -6,12 +6,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class FrmGestioExemplars extends JDialog {
+    /**
+     * Atributs privats de la finestra gestio exemplars
+     */
     private JPanel pnlGestioExemplars;
     private JButton btnAfegirExemplar;
     private JButton btnVisualitzarExemplars;
     private JButton btnSortir;
     private final Adaptador adaptador;
 
+    /**
+     * Constructor de la finestra de gestions d'exemplars
+     */
     public FrmGestioExemplars(JDialog parent, Adaptador adaptador) {
         this.adaptador = adaptador;
         setTitle("Exemplars");
@@ -21,7 +27,7 @@ public class FrmGestioExemplars extends JDialog {
         setModal(true);
         btnSortir.addActionListener(new ActionListener() {
             /**
-             * Invoked when an action occurs.
+             * El btnSortir tanca la finestra actual i torna a la finestra de gestions
              *
              * @param e the event to be processed
              */
@@ -30,7 +36,7 @@ public class FrmGestioExemplars extends JDialog {
         });
         btnAfegirExemplar.addActionListener(new ActionListener() {
             /**
-             * Invoked when an action occurs.
+             * El btnAfegirExemplar obra la nova finestra d'afegir exemplar
              *
              * @param e the event to be processed
              */
@@ -42,7 +48,7 @@ public class FrmGestioExemplars extends JDialog {
         });
         btnVisualitzarExemplars.addActionListener(new ActionListener() {
             /**
-             * Invoked when an action occurs.
+             * El btnVisualitzarExemplars obra la nova finestra per visualitzar els exemplars
              *
              * @param e the event to be processed
              */
