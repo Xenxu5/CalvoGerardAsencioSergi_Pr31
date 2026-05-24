@@ -6,33 +6,33 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AzGestio extends JDialog {
+public class FrmGestions extends JDialog {
 
-    private JPanel panel2;
-    private JButton usuarisButton;
-    private JButton exemplarsButton;
-    private JButton prestecsButton;
-    private JButton sortirButton;
-    private Adaptador adaptador;
+    private JPanel pnlGestions;
+    private JButton btnUsuaris;
+    private JButton btnExemplars;
+    private JButton btnPrestecs;
+    private JButton btnSortir;
+    private final Adaptador adaptador;
 
-    public AzGestio(JFrame parent, Adaptador adaptador) {
+    public FrmGestions(JFrame parent, Adaptador adaptador) {
 
         this.adaptador = adaptador;
         setTitle("Gestions");
-        setContentPane(panel2);
+        setContentPane(pnlGestions);
         setSize(400, 300);
         setLocationRelativeTo(parent);
         setModal(true);
-        sortirButton.addActionListener(new ActionListener() {
+        btnSortir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
             }
         });
-        usuarisButton.addActionListener(new ActionListener() {
+        btnUsuaris.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                gesUsuaris ventana = new gesUsuaris(AzGestio.this, adaptador);
+                FrmGestioUsuaris ventana = new FrmGestioUsuaris(FrmGestions.this, adaptador);
                 ventana.setVisible(true);
             }
         });

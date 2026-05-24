@@ -6,10 +6,10 @@ import java.awt.event.ActionListener;
 import prog2.adaptador.Adaptador;
 
 public class AppBiblioUB extends JFrame{
-    private JPanel panel1;
+    private JPanel pnlPrincipal;
     private JButton btnDades;
     private JButton btnSortir;
-    private JButton btnGestio;
+    private JButton btnGestions;
 
     private final Adaptador adaptador;
 
@@ -17,7 +17,7 @@ public class AppBiblioUB extends JFrame{
 
         adaptador = new Adaptador();
         setTitle("Biblioteca UB");
-        setContentPane(panel1);
+        setContentPane(pnlPrincipal);
         setSize(400, 300);
         setLocationRelativeTo(null);
         setDefaultCloseOperation (EXIT_ON_CLOSE);
@@ -27,10 +27,10 @@ public class AppBiblioUB extends JFrame{
                 System.exit(0);
             }
         });
-        btnGestio.addActionListener(new ActionListener() {
+        btnGestions.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AzGestio ventana = new AzGestio(AppBiblioUB.this, adaptador);
+                FrmGestions ventana = new FrmGestions(AppBiblioUB.this, adaptador);
                 ventana.setVisible(true);
 
             }
@@ -38,7 +38,7 @@ public class AppBiblioUB extends JFrame{
         btnDades.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AzDades ventana = new AzDades(AppBiblioUB.this, adaptador);
+                FrmDades ventana = new FrmDades(AppBiblioUB.this, adaptador);
                 ventana.setVisible(true);
             }
         });

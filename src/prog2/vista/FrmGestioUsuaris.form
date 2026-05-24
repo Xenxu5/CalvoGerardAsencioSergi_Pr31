@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="prog2.vista.gesUsuaris">
-  <grid id="27dc6" binding="usu" layout-manager="GridBagLayout">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="prog2.vista.FrmGestioUsuaris">
+  <grid id="27dc6" binding="pnlGestioUsuaris" layout-manager="GridBagLayout">
     <constraints>
       <xy x="20" y="20" width="500" height="400"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
-      <component id="77b75" class="javax.swing.JButton" binding="afegirUsuarisButton" default-binding="true">
+      <component id="77b75" class="javax.swing.JButton" binding="btnAfegirUsuari">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
@@ -16,7 +16,7 @@
           <text value="Afegir Usuaris"/>
         </properties>
       </component>
-      <component id="b8294" class="javax.swing.JButton" binding="visualitzarUsuarisButton" default-binding="true">
+      <component id="b8294" class="javax.swing.JButton" binding="btnVisualitzarUsuaris">
         <constraints>
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>
@@ -31,7 +31,7 @@
           <gridbag weightx="0.0" weighty="0.0" ipady="25"/>
         </constraints>
       </hspacer>
-      <component id="f1497" class="javax.swing.JButton" binding="sortirButton" default-binding="true">
+      <component id="f1497" class="javax.swing.JButton" binding="btnSortir">
         <constraints>
           <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>

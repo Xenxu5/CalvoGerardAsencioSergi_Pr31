@@ -7,26 +7,26 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class gesVisualitUsu extends JDialog {
+public class FrmVisualitzarUsuaris extends JDialog {
 
-    private JPanel visual;
-    private JList listausu;
-    private JButton sortir;
+    private JPanel pnlVisualitzarUsuaris;
+    private JList lstUsuaris;
+    private JButton btnSortir;
     private JScrollPane scroll; //si la llista comença a omplir la finestra apareix un scroll
-    private Adaptador adaptador;
+    private final Adaptador adaptador;
 
-    public gesVisualitUsu(JDialog parent, Adaptador adaptador){
+    public FrmVisualitzarUsuaris(JDialog parent, Adaptador adaptador){
 
         this.adaptador = adaptador;
         setTitle("Visualitzar Usuaris");
-        setContentPane(visual);
+        setContentPane(pnlVisualitzarUsuaris);
         setSize(400,700);
         setLocationRelativeTo(parent);
         setModal(true);
 
         visualitzarUsuaris();
 
-        sortir.addActionListener(new ActionListener() {
+        btnSortir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
@@ -83,7 +83,7 @@ public class gesVisualitUsu extends JDialog {
             }
         }
 
-        listausu.setModel(model);
+        lstUsuaris.setModel(model);
     }
 
 }

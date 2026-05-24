@@ -6,39 +6,39 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class gesAfegirUsu extends JDialog {
+public class FrmAfegirUsuari extends JDialog {
 
-    private JPanel afegusu;
-    private JTextField textNom;
-    private JTextField textEmail;
-    private JTextField textAdreca;
-    private JCheckBox siCheckBox;
-    private JButton acceptarButton;
-    private JButton cancelarButton;
-    private Adaptador adaptador;
+    private JPanel pnlAfegirUsuari;
+    private JTextField txtNom;
+    private JTextField txtEmail;
+    private JTextField txtAdreca;
+    private JCheckBox chkEstudiant;
+    private JButton btnAcceptar;
+    private JButton btnCancelar;
+    private final Adaptador adaptador;
 
-    public gesAfegirUsu(JDialog parent, Adaptador adaptador){
+    public FrmAfegirUsuari(JDialog parent, Adaptador adaptador){
         this.adaptador = adaptador;
         setTitle("Afegir usuari");
-        setContentPane(afegusu);
+        setContentPane(pnlAfegirUsuari);
         setSize(400, 300);
         setLocationRelativeTo(parent);
         setModal(true);
-        cancelarButton.addActionListener(new ActionListener() {
+        btnCancelar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {dispose();}
         });
 
-        acceptarButton.addActionListener(new ActionListener() {
+        btnAcceptar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String nom = textNom.getText();
-                String email = textEmail.getText();
-                String adreca = textAdreca.getText();
-                boolean esEstudiant = siCheckBox.isSelected();
+                String nom = txtNom.getText();
+                String email = txtEmail.getText();
+                String adreca = txtAdreca.getText();
+                boolean esEstudiant = chkEstudiant.isSelected();
 
                 if (nom.isEmpty() || email.isEmpty() || adreca.isEmpty()) {
-                    JOptionPane.showMessageDialog(gesAfegirUsu.this,
+                    JOptionPane.showMessageDialog(FrmAfegirUsuari.this,
                             "Tots els camps són obligatoris");
                     return;
                 }
@@ -46,14 +46,14 @@ public class gesAfegirUsu extends JDialog {
 
                     adaptador.afegirUsuari(email, nom, adreca, esEstudiant);
 
-                    JOptionPane.showMessageDialog(gesAfegirUsu.this,
+                    JOptionPane.showMessageDialog(FrmAfegirUsuari.this,
                             "Usuari afegit correctament"
                     );
                     dispose();
 
                 } catch (Exception ex) {
 
-                    JOptionPane.showMessageDialog(gesAfegirUsu.this, ex.getMessage()
+                    JOptionPane.showMessageDialog(FrmAfegirUsuari.this, ex.getMessage()
                     );
                 }
             }

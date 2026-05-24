@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="prog2.vista.AppBiblioUB">
-  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridBagLayout">
+  <grid id="27dc6" binding="pnlPrincipal" layout-manager="GridBagLayout">
     <constraints>
       <xy x="20" y="20" width="560" height="432"/>
     </constraints>
@@ -31,7 +31,7 @@
           <text value="Sortir"/>
         </properties>
       </component>
-      <component id="1ec58" class="javax.swing.JButton" binding="btnGestio">
+      <component id="1ec58" class="javax.swing.JButton" binding="btnGestions">
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="0.0" weighty="0.0"/>

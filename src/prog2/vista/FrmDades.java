@@ -6,31 +6,31 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AzDades extends JDialog {
-    private JPanel jpanel;
-    private JButton guardarDadesButton;
-    private JButton recuperarDadesButton;
-    private JButton sortirButton;
+public class FrmDades extends JDialog {
+    private JPanel pnlDades;
+    private JButton btnGuardarDades;
+    private JButton btnRecuperarDades;
+    private JButton btnSortir;
 
-    public AzDades(JFrame parent, Adaptador adaptador) {
+    public FrmDades(JFrame parent, Adaptador adaptador) {
         setTitle("Dades");
-        setContentPane(jpanel);
+        setContentPane(pnlDades);
         setSize(400, 300);
         setLocationRelativeTo(parent);
         setModal(true);
-        sortirButton.addActionListener(new ActionListener() {
+        btnSortir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
             }
         });
-        guardarDadesButton.addActionListener(new ActionListener() {
+        btnGuardarDades.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
                 JFileChooser fileChooser = new JFileChooser();
 
-                int resultat = fileChooser.showSaveDialog(AzDades.this);
+                int resultat = fileChooser.showSaveDialog(FrmDades.this);
 
                 if (resultat == JFileChooser.APPROVE_OPTION) {
 
@@ -40,24 +40,24 @@ public class AzDades extends JDialog {
                         adaptador.guardaDades(ruta);
 
                         JOptionPane.showMessageDialog(
-                                AzDades.this,
+                                FrmDades.this,
                                 "Dades guardades correctament"
                         );
 
                     } catch (Exception ex) {
-                        JOptionPane.showMessageDialog(AzDades.this, ex.getMessage());
+                        JOptionPane.showMessageDialog(FrmDades.this, ex.getMessage());
                     }
                 }
 
             }
         });
-        recuperarDadesButton.addActionListener(new ActionListener() {
+        btnRecuperarDades.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
                 JFileChooser fileChooser = new JFileChooser();
 
-                int resultat = fileChooser.showOpenDialog(AzDades.this);
+                int resultat = fileChooser.showOpenDialog(FrmDades.this);
 
                 if (resultat == JFileChooser.APPROVE_OPTION) {
 
@@ -67,12 +67,12 @@ public class AzDades extends JDialog {
                         adaptador.carregaDades(ruta);
 
                         JOptionPane.showMessageDialog(
-                                AzDades.this,
+                                FrmDades.this,
                                 "Dades carregades correctament"
                         );
 
                     } catch (Exception ex) {
-                        JOptionPane.showMessageDialog(AzDades.this, ex.getMessage());
+                        JOptionPane.showMessageDialog(FrmDades.this, ex.getMessage());
                     }
                 }
 
