@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="prog2.vista.FrmAfegirExemplar">
   <grid id="27dc6" binding="pnlAfegirExemplar" layout-manager="GridBagLayout">
     <constraints>
-      <xy x="20" y="20" width="730" height="400"/>
+      <xy x="44" y="43" width="526" height="362"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -13,7 +13,7 @@
           <gridbag weightx="0.0" weighty="0.0" ipadx="5"/>
         </constraints>
         <properties>
-          <text value="Admet préstec llarg?"/>
+          <text value="És préstec llarg?"/>
         </properties>
       </component>
       <component id="a0908" class="javax.swing.JCheckBox" binding="chkPrestecLlarg">

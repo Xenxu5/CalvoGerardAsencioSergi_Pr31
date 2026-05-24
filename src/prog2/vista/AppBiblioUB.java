@@ -6,13 +6,18 @@ import java.awt.event.ActionListener;
 import prog2.adaptador.Adaptador;
 
 public class AppBiblioUB extends JFrame{
+    /**
+     * Atributs privats de AppBiblioUb (finestra principal)
+     */
     private JPanel pnlPrincipal;
     private JButton btnDades;
     private JButton btnSortir;
     private JButton btnGestions;
-
+    // Atribut per conectar la part de l'app amb el adaptador del programa principal
     private final Adaptador adaptador;
-
+    /**
+     * Constructor de AppBiblioUB
+     */
     public AppBiblioUB() {
 
         adaptador = new Adaptador();
@@ -21,12 +26,18 @@ public class AppBiblioUB extends JFrame{
         setSize(400, 300);
         setLocationRelativeTo(null);
         setDefaultCloseOperation (EXIT_ON_CLOSE);
+        /**
+         * El btnSortir tanca directament l'aplicació
+         */
         btnSortir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
             }
         });
+        /**
+         * El btnGestions redirigeix a la finestra de l'apartat de gestions
+         */
         btnGestions.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -35,6 +46,9 @@ public class AppBiblioUB extends JFrame{
 
             }
         });
+        /**
+         * El btnGestions redirigeix a la finestra de l'apartat de dades
+         */
         btnDades.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -43,9 +57,18 @@ public class AppBiblioUB extends JFrame{
             }
         });
     }
+
+    /**
+     * Mostra la finestra principal de l'aplicació.
+     */
     public void go() {
         this.setVisible(true);
     }
+
+    /**
+     * Metode que incia l'app
+     * @param args
+     */
 
     public static void main(String[] args) {
         AppBiblioUB app = new AppBiblioUB();

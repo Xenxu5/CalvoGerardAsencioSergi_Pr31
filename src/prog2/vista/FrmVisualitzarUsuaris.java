@@ -9,12 +9,18 @@ import java.awt.event.ActionListener;
 
 public class FrmVisualitzarUsuaris extends JDialog {
 
+    /**
+     * Atributs privats de la finestra de visualització d'usuaris
+     */
     private JPanel pnlVisualitzarUsuaris;
     private JList lstUsuaris;
     private JButton btnSortir;
     private JScrollPane scroll; //si la llista comença a omplir la finestra apareix un scroll
     private final Adaptador adaptador;
 
+    /**
+     * Constructor de la finestra per a visualitzar els usuaris registrats
+     */
     public FrmVisualitzarUsuaris(JDialog parent, Adaptador adaptador){
 
         this.adaptador = adaptador;
@@ -26,6 +32,9 @@ public class FrmVisualitzarUsuaris extends JDialog {
         // Cridem al mètode per mostrar els usuaris
         visualitzarUsuaris();
 
+        /**
+         * El btnSortir tanca la finestra de dades i torna a la finestra de gestions d'usuari
+         */
         btnSortir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
